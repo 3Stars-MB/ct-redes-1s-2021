@@ -85,3 +85,26 @@ Colocar "no" na frete do comando
 >enable
 #copy running-config startup-config
 ```
+
+**Resetar o equipamento**
+```
+>enable
+#write erase
+```
+
+**Colocar IP em uma Interface**
+```
+>enable
+#configure terminal
+(config)#interface <nome>
+(config-if)#ip address <ip> <mascara>
+(config-if)#no shutdown
+```
+
+**Colocar descrição em uma interface
+```
+>enable
+#configure terminal
+(config)#interface <nome>
+(config)#description <descricao>
+```
