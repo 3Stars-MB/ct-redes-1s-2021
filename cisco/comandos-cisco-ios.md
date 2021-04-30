@@ -108,3 +108,9 @@ Colocar "no" na frete do comando
 (config)#interface <nome>
 (config)#description <descricao>
 ```
+
+**Visualizar tabela de roteamento [ROTEADOR]**
+```
+>enable
+#show ip route
+```
