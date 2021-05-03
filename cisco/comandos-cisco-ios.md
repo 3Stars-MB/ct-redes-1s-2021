@@ -101,7 +101,7 @@ Colocar "no" na frete do comando
 (config-if)#no shutdown
 ```
 
-**Colocar descrição em uma interface
+**Colocar descrição em uma interface**
 ```
 >enable
 #configure terminal
