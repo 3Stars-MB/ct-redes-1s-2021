@@ -5,7 +5,7 @@ Resetar o Switch
 		devmgmt.msc
 	3) Conectar o cabo de energia e ligar o Switch
 	4) Abrir o Putty e selecionar a opção 'Serial', inserir a opção COM1 e clicar no botão 'Open'
-	5) Esperar o Switch ligar completamente (Vai aparecer a tela '>' / Vai pedir para entrar no modo de configuração guiado [yes/no] ou o equipamento vai pedir uma senha caso já esteja configurado)
+	5) Esperar o Switch ligar completamente (Vai aparecer a tela '>' OU vai pedir para entrar no modo de configuração guiado [yes/no] OU o equipamento vai pedir uma senha caso já esteja configurado)
 		Caso a tela do Putty fique muito tempo parada, aperte a tecla Enter
 	6) Após o Switch ligar completamente, aperte e segure o botão MODE até que os dois primeiros LEDs fiquem Laranja e solte.
 	7) Espere o Switch reiniciar e verifique se o reset funcionou
