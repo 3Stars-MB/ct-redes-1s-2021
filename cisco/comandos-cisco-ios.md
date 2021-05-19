@@ -1,3 +1,4 @@
+# CONFIGURAÇÕES GERAIS
 **Trocar nome do equipamento**
 ```
 >enable
@@ -109,8 +110,32 @@ Colocar "no" na frete do comando
 (config)#description <descricao>
 ```
 
-**Visualizar tabela de roteamento [ROTEADOR]**
+# CONFIGURAÇÕES EXCLUSIVAS PARA O ROTEADOR
+**Visualizar tabela de roteamento**
 ```
 >enable
 #show ip route
+```
+# CONFIGURAÇÕES EXCLUSIVAS PARA O SWITCH
+**Criar uma VLAN**
+```
+>enable
+#configure terminal
+(config)#vlan <nº-da-vlan>
+(config-vlan)#name <nome-da-vlan>
+```
+
+**Colocar uma Interface em uma VLAN (Access)**
+```
+>enable
+#configure terminal
+(config)#interface <nome-da-interface>
+(config-if)#switchport mode access
+(config-if)#switchport access vlan 10
+```
+
+**Verificar as VLAN criadas no equipamento**
+```
+>enable
+#show vlan brief
 ```
