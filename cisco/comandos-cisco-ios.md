@@ -139,3 +139,28 @@ Colocar "no" na frete do comando
 >enable
 #show vlan brief
 ```
+
+**Configurar uma Interface para o Modo Trunk**
+```
+>enable
+#configure terminal
+(config)#interface <nome-da-interface>
+(config-if)#switchport mode trunk
+```
+
+**Configurar VLAN Nativa na Interface Trunk**
+```
+>enable
+#configure terminal
+(config)#interface <nome-da-interface>
+(config-if)#switchport trunk native vlan <nº-da-vlan-nativa>
+```
+
+**Liberar as VLANs na Interface Trunk**
+```
+>enable
+#configure terminal
+(config)#interface <nome-da-interface>
+(config-if)#switchport trunk allowed vlan <lista de vlans separadas por VÍRGULAS>
+        Exemplo: switchport trunk allowed vlan 10,20,30,99
+```
