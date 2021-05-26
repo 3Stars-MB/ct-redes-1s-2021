@@ -164,3 +164,20 @@ Colocar "no" na frete do comando
 (config-if)#switchport trunk allowed vlan <lista de vlans separadas por VÍRGULAS>
         Exemplo: switchport trunk allowed vlan 10,20,30,99
 ```
+
+**Configurar IP no Switch**
+```
+>enable
+#configure terminal
+(config)#interface vlan 90
+(config-if)#ip address <endereço> <máscara>
+```
+
+**Configurar as VTY para usar TELNET**
+```
+>enable
+#configure terminal
+(config)#line vty 0 15
+(config-line)#password <senha>
+(config-line)#login
+```
