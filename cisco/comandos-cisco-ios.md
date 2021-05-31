@@ -110,12 +110,68 @@ Colocar "no" na frete do comando
 (config)#description <descricao>
 ```
 
+**Configurar o SSH nas linhas de VTY**
+```
+>enable
+#configure terminal
+
+!Definir o nome do domínio
+(config)#ip domain-name <nome-do-domínio>
+
+!Gerar a chave de criptografia
+(config)#crypto key generate rsa general-keys modulus <nº-de-bits-da-chave>
+
+!Criar usuário no dispositivo
+(config)#username <nome-do-usuário> privilege <1-15> secret <senha>
+
+!Ativar o SSH nas linhas de VTY
+(config)#line vty 0 15
+(config-line)#transport input ssh
+(config-line)#login local
+```
+
+**Configurar as VTY para usar TELNET**
+```
+>enable
+#configure terminal
+(config)#line vty 0 15
+(config-line)#password <senha>
+(config-line)#login
+```
+
+**Ativar Login Local na Console**
+```
+>enable
+#configure terminal
+(config)#line console 0
+(config-line)#login local
+```
+
 # CONFIGURAÇÕES EXCLUSIVAS PARA O ROTEADOR
 **Visualizar tabela de roteamento**
 ```
 >enable
 #show ip route
 ```
+
+**Configurar SubInterfaces no Router**
+```
+>enable
+#configure terminal
+(config)#interface <nome-da-subinterface>
+        Exemplo: interface g0/0.10
+                    Sendo 10 o número da VLAN
+(config-subif)#encapsulation dot1q <nº-da-vlan>
+(config-subif)#ip address <ip> <máscara>
+```
+
+**Configurar rota estática**
+```
+>enable
+#configure terminal
+(config)#ip route <id-da-rede-de-destino> <máscara-da-rede-de-destino> <ip-do-roteador-que-conhece-a-rede>
+```
+
 # CONFIGURAÇÕES EXCLUSIVAS PARA O SWITCH
 **Criar uma VLAN**
 ```
@@ -171,13 +227,4 @@ Colocar "no" na frete do comando
 #configure terminal
 (config)#interface vlan 90
 (config-if)#ip address <endereço> <máscara>
-```
-
-**Configurar as VTY para usar TELNET**
-```
->enable
-#configure terminal
-(config)#line vty 0 15
-(config-line)#password <senha>
-(config-line)#login
 ```
