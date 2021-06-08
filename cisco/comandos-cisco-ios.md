@@ -165,6 +165,21 @@ Colocar "no" na frete do comando
 (config-subif)#ip address <ip> <máscara>
 ```
 
+**Inserir IPv6 em uma Interface**
+```
+>enable
+#configure terminal
+(config)#interface <nome-da-interface>
+(config-if)#ipv6 address <endereço>/<prefixo>
+```
+
+**Ativar o Roteamento IPV6**
+```
+>enable
+#configure terminal
+(config)#ipv6 unicast-routing
+```
+
 **Configurar rota estática**
 ```
 >enable
